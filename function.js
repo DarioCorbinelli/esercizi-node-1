@@ -1,5 +1,3 @@
-function doSomething(name) {
+export default function doSomething(name) {
   console.log("Ciao " + name);
 }
-
-module.exports = doSomething

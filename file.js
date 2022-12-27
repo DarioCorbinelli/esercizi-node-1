@@ -1,3 +1,3 @@
-const fnc = require("./function")
+import fnc from "./function.js"
 
 fnc("dario")
