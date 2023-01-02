@@ -9,8 +9,14 @@ function luckyDraw(player) {
         reject(new Error(`${player} lost the draw.`));
       }
     });
-  }).then(resolved => console.log(resolved))
-    .catch(rejected => console.log(rejected.message))
+  })
 }
 
-["Joe", "Caroline", "Sabrina"].forEach(player => luckyDraw(player))
+["Joe", "Caroline", "Sabrina"].forEach(async player => {
+  try {
+    const resolved = await luckyDraw(player)
+    console.log(resolved)
+  } catch(err) {
+    console.log(err.message);
+  }
+})
